@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  useFonts,
+  MontserratAlternates_400Regular,
+  MontserratAlternates_300Light,
+  MontserratAlternates_500Medium,
+  MontserratAlternates_700Bold,
+  MontserratAlternates_800ExtraBold,
+} from "@expo-google-fonts/montserrat-alternates";
+import Routing from "./app/routing/Routing";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const App = () => {
+  let [fonts] = useFonts({
+    MontserratAlternates_400Regular,
+    MontserratAlternates_300Light,
+    MontserratAlternates_500Medium,
+    MontserratAlternates_700Bold,
+    MontserratAlternates_800ExtraBold,
+  });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  if (!fonts) return null;
+  return <Routing />;
+};
+
+export default App;

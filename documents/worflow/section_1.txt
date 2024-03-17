@@ -1,0 +1,30 @@
+
+Section 1
+
+1. Onboarding And walkthrough sign up
+
+ > Onboarding Screen
+   + Option to login 
+   + Option to register
+
+2. On Register
+
+  > Get Gender Input (single value)
+  > Get Age Input (single value)
+  > Get Genre Input (multiple value)
+  > Get Profile Info Input (multiple value)
+  > Register Form Input (multiple value)
+  
+3. On Login
+
+  > Get Login Input (multiple value)
+    + if email verified, get to homepage
+    + if email not verified, show modal to verify email
+    + show verify email page
+    + fill email for verification
+    + verify email on correct verification code
+
+  > Set Forgot Password
+    + if forgot password click, show forgot password page
+    + Get Inputs and allow reset password
+    + Once reset password, send back to login.
